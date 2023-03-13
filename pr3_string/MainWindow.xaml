@@ -1,0 +1,214 @@
+﻿<Window x:Class="pr3_string.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:pr3_string"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TabControl HorizontalAlignment="Left" Height="362" Margin="10,19,0,0" VerticalAlignment="Top" Width="695">
+            <TabItem Header="Contains">
+                <Grid Background="#FFE5E5E5">
+                    <TextBox Name="TxtBox1_Contains" HorizontalAlignment="Left" Height="103" Margin="28,64,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="220"/>
+                    <TextBox Name="TxtBox2_Contains" HorizontalAlignment="Left" Height="103" Margin="28,221,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="220"/>
+
+                    <Label Content="Введите исходный текст" HorizontalAlignment="Left" Height="31" Margin="28,28,0,0" VerticalAlignment="Top" Width="220"/>
+                    <Label Content="Введите строку, которую хотите найти" HorizontalAlignment="Left" Height="31" Margin="28,185,0,0" VerticalAlignment="Top" Width="241"/>
+                    <Label Content="Описание метода" HorizontalAlignment="Left" Margin="478,28,0,0" VerticalAlignment="Top" Height="31" Width="192"/>
+                    <Label Content="Итоговое решение" HorizontalAlignment="Left" Height="31" Margin="439,221,0,0" VerticalAlignment="Top" Width="240"/>
+
+                    <Button Content="Найти" HorizontalAlignment="Left" Margin="304,168,0,0" VerticalAlignment="Top" Height="32" Width="98" Click="Button_Click_1"/>
+
+                    <TextBlock Background="White" HorizontalAlignment="Left" Height="121" Margin="478,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201"><Run Text=" Contains - проверяет содержит           "/><LineBreak/><Run Text=" текст указанный текст или нет с "/><LineBreak/><Run Text=" учетом регистра в C#       "/><LineBreak/><Run/><LineBreak/><Run Text=" string str1 = &quot;Hello World!&quot;"/><LineBreak/><Run Text=" string str2 = &quot;Hello&quot;"/><LineBreak/><Run Text=" str1.Contains(str2)"/><LineBreak/><Run/></TextBlock>
+                    <TextBlock Name="TxtBl_otvet" HorizontalAlignment="Left" Height="67" Margin="439,257,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="206" Background="White"/>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Concat">
+                <Grid Background="#FFE5E5E5">
+                    <TextBox Name="TxtBox1_Concat" HorizontalAlignment="Left" Height="103" Margin="28,64,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="220"/>
+                    <TextBox Name="TxtBox2_Concat" HorizontalAlignment="Left" Height="103" Margin="28,221,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="220"/>
+
+                    <Label Content="Введите первую строку" HorizontalAlignment="Left" Height="31" Margin="28,28,0,0" VerticalAlignment="Top" Width="220"/>
+                    <Label Content="Введите вторую строку" HorizontalAlignment="Left" Height="31" Margin="28,185,0,0" VerticalAlignment="Top" Width="241"/>
+                    <Label Content="Описание метода" HorizontalAlignment="Left" Margin="478,28,0,0" VerticalAlignment="Top" Height="31" Width="192"/>
+                    <Label Content="Итоговое решение" HorizontalAlignment="Left" Height="31" Margin="439,221,0,0" VerticalAlignment="Top" Width="240"/>
+
+                    <Button Content="Объеденить" HorizontalAlignment="Left" Margin="304,168,0,0" VerticalAlignment="Top" Height="32" Width="98" Click="Button_Click_2"/>
+
+                    <TextBlock Background="White" HorizontalAlignment="Left" Height="121" Margin="478,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201"><Run Text=" Concat - ("/><Run Language="ru-ru" Text="конкатенация"/><Run Text=") "/><Run Language="ru-ru" Text=" "/><LineBreak/><Run Language="ru-ru" Text=" объеденяет несколько или"/><LineBreak/><Run Language="ru-ru" Text=" более строк"/><Run Text=" "/><Run Language="ru-ru" Text="в одну"/><LineBreak/><Run/><LineBreak/><Run Language="ru-ru" Text=" "/><Run Text="string str1 = &quot;Hello&quot;"/><LineBreak/><Run Language="ru-ru" Text=" "/><Run Text="string str2 = &quot;world&quot;"/><LineBreak/><Run Language="ru-ru" Text=" "/><Run Text="string res = string.Concat(str1, str2)"/><LineBreak/><Run/></TextBlock>
+                    <TextBlock Name="TxtBl_otvet2" HorizontalAlignment="Left" Height="67" Margin="439,257,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="206" Background="White"/>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="EndsWith">
+                <Grid Background="#FFE5E5E5">
+                    <TextBox Name="TxtBox1_EndWith" HorizontalAlignment="Left" Height="103" Margin="28,64,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="220"/>
+                    <TextBox Name="TxtBox2_EndWith" HorizontalAlignment="Left" Height="103" Margin="28,221,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="220"/>
+
+                    <Label Content="Введите первую строку" HorizontalAlignment="Left" Height="31" Margin="28,28,0,0" VerticalAlignment="Top" Width="220"/>
+                    <Label Content="Введите вторую строку" HorizontalAlignment="Left" Height="31" Margin="28,185,0,0" VerticalAlignment="Top" Width="241"/>
+                    <Label Content="Описание метода" HorizontalAlignment="Left" Margin="478,28,0,0" VerticalAlignment="Top" Height="31" Width="192"/>
+                    <Label Content="Итоговое решение" HorizontalAlignment="Left" Height="31" Margin="439,226,0,0" VerticalAlignment="Top" Width="240"/>
+
+                    <Button Content="Проверить" HorizontalAlignment="Center" Margin="0,182,0,0" VerticalAlignment="Top" Height="32" Width="98" Click="Button_Click_3"/>
+
+                    <TextBlock Background="White" HorizontalAlignment="Left" Height="162" Margin="421,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="258"><Run Text=" EndsWith - позволяет  проверить, "/><LineBreak/><Run Text=" заканчивается ли указанная строка "/><LineBreak/><Run Text=" заданным суффиксом. Он возвращает "/><LineBreak/><Run Text=" true, если строка заканчивается заданным"/><LineBreak/><Run Text=" суффиксом, и false в противном случае."/><LineBreak/><Run/><LineBreak/><Run Text=" string str1 = &quot;Hello World&quot;;"/><LineBreak/><Run Text=" string str2 = &quot;World&quot;;"/><LineBreak/><Run Text=" if (str1.EndsWith(str2)) {Console.Write(&quot;true&quot;)}"/><LineBreak/><Run Text=" else {Console.Write(&quot;false&quot;)}"/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
+                    <TextBlock Name="TxtBl_otvet3" HorizontalAlignment="Left" Height="67" Margin="439,257,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="206" Background="White"/>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="IndexOf/LastIndexOf">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="136*"/>
+                        <ColumnDefinition Width="553*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox Name="TxtBox1_Index" HorizontalAlignment="Left" Height="83" Margin="28,41,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="220" Grid.ColumnSpan="2"/>
+                    <TextBox Name="TxtBox2_Index" HorizontalAlignment="Left" Height="80" Margin="28,172,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="220" Grid.ColumnSpan="2"/>
+
+                    <Label Content="Введите исходный текст" HorizontalAlignment="Left" Height="31" Margin="28,10,0,0" VerticalAlignment="Top" Width="220" Grid.ColumnSpan="2"/>
+                    <Label Content="Введите подстрку или символ" HorizontalAlignment="Left" Height="31" Margin="28,136,0,0" VerticalAlignment="Top" Width="241" Grid.ColumnSpan="2"/>
+                    <Label Content="Описание метода" HorizontalAlignment="Left" Margin="342,28,0,0" VerticalAlignment="Top" Height="31" Width="192" Grid.Column="1"/>
+                    <Label Content="Полученный индекс" HorizontalAlignment="Left" Height="31" Margin="303,221,0,0" VerticalAlignment="Top" Width="240" Grid.Column="1"/>
+
+                    <Button Content="Поиск первого вхождения строки или подстроки" HorizontalAlignment="Left" Margin="28,258,0,0" VerticalAlignment="Top" Height="32" Width="309" Click="Button_Click_4" Grid.ColumnSpan="2"/>
+                    <Button Content="Поиск последнего вхождения строки или подстроки" HorizontalAlignment="Left" Margin="28,295,0,0" VerticalAlignment="Top" Height="32" Width="309" Click="Button_Click_4_4" Grid.ColumnSpan="2"/>
+
+                    <TextBlock Background="White" HorizontalAlignment="Left" Height="153" Margin="342,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201" Grid.Column="1"><Run Text=" IndexOf в C# используется для "/><LineBreak/><Run Text=" "/><Run Text="поиска первого вхождения "/><LineBreak/><Run Text=" "/><Run Text="подстроки в строку. "/><LineBreak/><Run Text=" LastIndexOf возвращает индекс  "/><LineBreak/><Run Text=" последнего вхождения указанной"/><LineBreak/><Run Text=" строки в строке."/><LineBreak/><Run/><LineBreak/><Run Foreground="Blue" Text=" int "/><Run Text="indOf = str1.IndexOf(str2);"/><LineBreak/><Run Text=" "/><Run Foreground="Blue" Text="int "/><Run Text="indOf = str1.LastIndexOf(str2); "/><Span Foreground="Blue"/><Span/><LineBreak/><Run/><LineBreak/><Run Text=" "/></TextBlock>
+                    <TextBlock Name="TxtBl_otvet4" HorizontalAlignment="Left" Height="67" Margin="303,257,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="206" Background="White" Grid.Column="1"/>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Insert">
+                <Grid Background="#FFE5E5E5">
+                    <TextBox Name="TxtBox1_Insert" HorizontalAlignment="Left" Height="56" Margin="28,64,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="220"/>
+                    <TextBox Name="TxtBox2_Insert" HorizontalAlignment="Left" Height="49" Margin="28,161,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="220"/>
+                    <TextBox Name="TxtBox3_Insert" HorizontalAlignment="Left" Height="49" Margin="28,257,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="220"/>
+
+
+                    <Label Content="Введите первую строку" HorizontalAlignment="Left" Height="31" Margin="28,28,0,0" VerticalAlignment="Top" Width="220"/>
+                    <Label Content="Введите вторую строку для вставки" HorizontalAlignment="Left" Height="31" Margin="28,125,0,0" VerticalAlignment="Top" Width="241"/>
+                    <Label Content="Описание метода" HorizontalAlignment="Left" Margin="421,28,0,0" VerticalAlignment="Top" Height="31" Width="192"/>
+                    <Label Content="Итоговое решение" HorizontalAlignment="Left" Height="31" Margin="439,226,0,0" VerticalAlignment="Top" Width="240"/>
+                    <Label Content="Введите индекс для замены" HorizontalAlignment="Left" Height="31" Margin="28,221,0,0" VerticalAlignment="Top" Width="241"/>
+
+                    <Button Content="Вставить элемент" HorizontalAlignment="Center" Margin="0,182,0,0" VerticalAlignment="Top" Height="32" Width="114" Click="Button_Click_5"/>
+
+                    <TextBlock Background="White" HorizontalAlignment="Left" Height="162" Margin="421,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="258"><Run Text=" Insert - используется для вставки одной   "/><LineBreak/><Run Text=" строки в другую в указанную позицию.Метод"/><LineBreak/><Run Text=" принимает два аргумента: индекс, по"/><LineBreak/><Run Text=" которому будет произведена вставка, и  "/><LineBreak/><Run Text=" строку, которую нужно вставить."/><LineBreak/><Run/><LineBreak/><Run Text=" string str1 = &quot;Hello World&quot;;"/><LineBreak/><Run Text=" string newString = str1.Insert(4, &quot;, &quot;);"/></TextBlock>
+                    <TextBlock Name="TxtBl_otvet5" HorizontalAlignment="Left" Height="67" Margin="439,257,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="206" Background="White"/>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Join">
+                <Grid Background="#FFE5E5E5">
+                    <TextBox Name="TxtBox1_Join" HorizontalAlignment="Left" Height="103" Margin="28,64,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="220"/>
+                    <TextBox Name="TxtBox2_Join" HorizontalAlignment="Left" Height="103" Margin="28,221,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="220"/>
+
+                    <Label Content="Введите текст" HorizontalAlignment="Left" Height="31" Margin="28,28,0,0" VerticalAlignment="Top" Width="220"/>
+                    <Label Content="Введите символ - разделитель" HorizontalAlignment="Left" Height="31" Margin="28,185,0,0" VerticalAlignment="Top" Width="241"/>
+                    <Label Content="Описание метода" HorizontalAlignment="Left" Margin="439,28,0,0" VerticalAlignment="Top" Height="31" Width="192"/>
+                    <Label Content="Итоговое решение" HorizontalAlignment="Left" Height="31" Margin="439,221,0,0" VerticalAlignment="Top" Width="240"/>
+
+                    <Button Content="Заменить" HorizontalAlignment="Left" Margin="304,168,0,0" VerticalAlignment="Top" Height="32" Width="98" Click="Button_Click_6"/>
+
+                    <TextBlock Background="White" HorizontalAlignment="Left" Height="137" Margin="439,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="240"><Run Text=" Join используется для объединения "/><LineBreak/><Run Text=" элементов массива или коллекции"/><LineBreak/><Run Text=" строк в единую строку, "/><LineBreak/><Run Text=" разделенную заданным  "/><LineBreak/><Run Text=" разделителем."/><LineBreak/><Run/><LineBreak/><Run Text="string[] str1 = { &quot;"/><Run Language="ru-ru" Text="ябл"/><Run Text="&quot;, &quot;"/><Run Language="ru-ru" Text="бан"/><Run Text="&quot;, &quot;"/><Run Language="ru-ru" Text="виш"/><Run Text="&quot; };"/><LineBreak/><Run Text="string result = string.Join(&quot;,&quot;, str1);"/></TextBlock>
+                    <TextBlock Name="TxtBl_otvet6" HorizontalAlignment="Left" Height="67" Margin="439,257,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="206" Background="White"/>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Replace">
+                <Grid Background="#FFE5E5E5">
+                    <TextBox Name="TxtBox1_Replace" HorizontalAlignment="Left" Height="80" Margin="28,64,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="220"/>
+                    <TextBox Name="TxtBox2_Replace" HorizontalAlignment="Left" Height="52" Margin="28,175,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="220"/>
+                    <TextBox Name="TxtBox3_Replace" HorizontalAlignment="Left" Height="52" Margin="28,264,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="220"/>
+
+                    <Label Content="Введите текст" HorizontalAlignment="Left" Height="31" Margin="28,41,0,0" VerticalAlignment="Top" Width="220"/>
+                    <Label Content="Введите подстроку для замены" HorizontalAlignment="Left" Height="31" Margin="28,0,0,0" VerticalAlignment="Center" Width="241"/>
+                    <Label Content="Описание метода" HorizontalAlignment="Left" Margin="439,28,0,0" VerticalAlignment="Top" Height="31" Width="192"/>
+                    <Label Content="Итоговое решение" HorizontalAlignment="Left" Height="31" Margin="439,221,0,0" VerticalAlignment="Top" Width="240"/>
+                    <Label Content="Введите новую строку" HorizontalAlignment="Left" Height="31" Margin="28,239,0,0" VerticalAlignment="Top" Width="241"/>
+
+                    <Button Content="Заменить" HorizontalAlignment="Left" Margin="304,168,0,0" VerticalAlignment="Top" Height="32" Width="98" Click="Button_Click_7"/>
+
+                    <TextBlock Background="White" HorizontalAlignment="Left" Height="137" Margin="439,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="240"><Run Text=" "/><Run Text="Replace "/><Run Text="- "/><Run Text="предназначен для замены "/><Run Text=" "/><LineBreak/><Run Text=" "/><Run Text="всех вхождений определенной"/><Run Text=" "/><Run Text=" "/><LineBreak/><Run Text=" "/><Run Text="подстроки в строке на другую заданную "/><Run Text=" "/><LineBreak/><Run Text=" "/><Run Text="подстроку"/><Run Language="ru-ru" Text="."/><LineBreak/><Run Language="ru-ru"/><LineBreak/><Run Language="ru-ru" Text=" string str"/><Run Text="1"/><Run Language="ru-ru" Text=" = &quot;hello world&quot;;"/><LineBreak/><Run Language="ru-ru" Text=" string newStr = str"/><Run Text="1"/><Run Language="ru-ru" Text=".Replace(&quot;world&quot;, &quot;ЦЦЦ&quot;);"/></TextBlock>
+                    <TextBlock Name="TxtBl_otvet7" HorizontalAlignment="Left" Height="67" Margin="439,257,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="206" Background="White"/>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Split">
+                <Grid Background="#FFE5E5E5">
+                    <TextBox Name="TxtBox1_Split" HorizontalAlignment="Left" Height="103" Margin="28,64,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="220"/>
+                    <TextBox Name="TxtBox2_Split" HorizontalAlignment="Left" Height="103" Margin="28,221,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="220"/>
+
+                    <Label Content="Введите исходный текст" HorizontalAlignment="Left" Height="31" Margin="28,28,0,0" VerticalAlignment="Top" Width="220"/>
+                    <Label Content="Введите разделить" HorizontalAlignment="Left" Height="31" Margin="28,185,0,0" VerticalAlignment="Top" Width="241"/>
+                    <Label Content="Описание метода" HorizontalAlignment="Left" Margin="478,28,0,0" VerticalAlignment="Top" Height="31" Width="192"/>
+                    <Label Content="Итоговое решение" HorizontalAlignment="Left" Height="31" Margin="439,196,0,0" VerticalAlignment="Top" Width="240"/>
+
+                    <Button Content="Разделить" HorizontalAlignment="Left" Margin="304,168,0,0" VerticalAlignment="Top" Height="32" Width="98" Click="Button_Click_8"/>
+
+                    <TextBlock Background="White" HorizontalAlignment="Left" Height="121" Margin="478,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201"><Run Text=" "/><Run Text="Split() используется для разделения"/><LineBreak/><Run Text=" строки на массив подстрок на"/><LineBreak/><Run Text=" основе определенного "/><LineBreak/><Run Text=" "/><Run Text="разделителя. Разделитель может "/><LineBreak/><Run Text=" "/><Run Text="быть любым символом"/><Run Text="."/><LineBreak/><Run/><LineBreak/><Run Text="string["/><Run Language="ru-ru" Text=" "/><Run Text="] words = str1.Split(str2);"/><LineBreak/><Run/></TextBlock>
+                    <TextBlock Name="TxtBl_otvet8" HorizontalAlignment="Left" Height="103" Margin="439,221,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="206" Background="White"/>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Substring">
+                <Grid Background="#FFE5E5E5">
+                    <TextBox Name="TxtBox1_Subs" HorizontalAlignment="Left" Height="80" Margin="28,64,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="220"/>
+                    <TextBox Name="TxtBox2_Subs" HorizontalAlignment="Left" Height="52" Margin="28,175,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="220"/>
+                    <TextBox Name="TxtBox3_Subs" HorizontalAlignment="Left" Height="52" Margin="28,264,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="220"/>
+
+                    <Label Content="Введите текст" HorizontalAlignment="Left" Height="31" Margin="28,41,0,0" VerticalAlignment="Top" Width="220"/>
+                    <Label Content="Введите индекс выбранного слова" HorizontalAlignment="Left" Height="31" Margin="28,0,0,0" VerticalAlignment="Center" Width="241"/>
+                    <Label Content="Описание метода" HorizontalAlignment="Left" Margin="439,28,0,0" VerticalAlignment="Top" Height="31" Width="192"/>
+                    <Label Content="Итоговое решение" HorizontalAlignment="Left" Height="31" Margin="439,226,0,0" VerticalAlignment="Top" Width="240"/>
+                    <Label Content="Введите число выводимых индексов " HorizontalAlignment="Left" Height="31" Margin="28,239,0,0" VerticalAlignment="Top" Width="241"/>
+
+                    <Button Content="Извлечь" HorizontalAlignment="Left" Margin="304,168,0,0" VerticalAlignment="Top" Height="32" Width="98" Click="Button_Click_9"/>
+
+                    <TextBlock Background="White" HorizontalAlignment="Left" Height="162" Margin="439,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="240"><Run Text=" Substring - используется для  извлечения  "/><LineBreak/><Run Text=" подстроки из строки. Он позволяет  "/><LineBreak/><Run Text=" выбрать часть строки, начиная с  "/><LineBreak/><Run Text=" определенного  индекса и   "/><LineBreak/><Run Text=" продолжающуюся на определенное "/><LineBreak/><Run Text=" количество  символов."/><LineBreak/><Run/><LineBreak/><Run Text="string str1 = &quot;This is an example string&quot;;"/><LineBreak/><Run Text="string substring = str1.Substring(2, 5);"/><LineBreak/><Run/></TextBlock>
+                    <TextBlock Name="TxtBl_otvet9" HorizontalAlignment="Left" Height="67" Margin="439,251,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="206" Background="White"/>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="ToUpper/ToLower">
+                <Grid Background="#FFE5E5E5">
+                    <TextBox Name="TxtBox1_ToUpLow" HorizontalAlignment="Left" Height="173" Margin="28,59,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="220"/>
+
+                    <Label Content="Введите исходный текст" HorizontalAlignment="Left" Height="31" Margin="28,28,0,0" VerticalAlignment="Top" Width="220"/>
+                    <Label Content="Описание метода" HorizontalAlignment="Left" Margin="392,26,0,0" VerticalAlignment="Top" Height="31" Width="192"/>
+                    <Label Content="Итоговое решение" HorizontalAlignment="Left" Height="31" Margin="344,201,0,0" VerticalAlignment="Top" Width="240"/>
+
+                    <Button Content="Сделать текст в нижнем регистре" HorizontalAlignment="Left" Margin="28,237,0,0" VerticalAlignment="Top" Height="32" Width="220" Click="Button_Click_10_1"/>
+                    <Button Content="Сделать текст в верхнем регистре" HorizontalAlignment="Left" Margin="28,274,0,0" VerticalAlignment="Top" Height="32" Width="220" Click="Button_Click_10"/>
+
+                    <TextBlock Background="White" HorizontalAlignment="Left" Height="123" Margin="392,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="278"><Run Language="ru-ru" Text=" "/><Run Text="В C# ToUpper и ToLower - это методы, которые "/><LineBreak/><Run Language="ru-ru" Text=" "/><Run Text="позволяют преобразовать все буквы в строке в"/><LineBreak/><Run Text=" верхний или нижний регистр соответственно."/><LineBreak/><Run/><LineBreak/><Run Text=" string upperStr = str"/><Run Language="ru-ru" Text="1"/><Run Text=".ToUpper();"/><LineBreak/><Run Language="ru-ru" Text=" string lowerStr = str1.ToLower();"/><LineBreak/><Run Language="ru-ru"/><LineBreak/><Run/></TextBlock>
+                    <TextBlock Name="TxtBl_otvet10" HorizontalAlignment="Left" Height="92" Margin="344,232,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="326" Background="White"/>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Trim">
+                <Grid Background="#FFE5E5E5">
+                    <TextBox Name="TxtBox1_Trim" HorizontalAlignment="Left" Height="103" Margin="10,64,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="220"/>
+                    <TextBox Name="TxtBox2_Trim" HorizontalAlignment="Left" Height="103" Margin="10,221,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="220"/>
+
+                    <Label Content="Введите исходный текст" HorizontalAlignment="Left" Height="31" Margin="10,28,0,0" VerticalAlignment="Top" Width="220"/>
+                    <Label Content="Введите символ который хотите убрать &#xD;&#xA;в начале и в конце" HorizontalAlignment="Left" Height="44" Margin="10,177,0,0" VerticalAlignment="Top" Width="231"/>
+                    <Label Content="Описание метода" HorizontalAlignment="Left" Margin="439,28,0,0" VerticalAlignment="Top" Height="31" Width="192"/>
+                    <Label Content="Итоговое решение" HorizontalAlignment="Left" Height="31" Margin="439,209,0,0" VerticalAlignment="Top" Width="240"/>
+
+                    <Button Content="Убрать с обеих сторон" HorizontalAlignment="Left" Margin="235,224,0,0" VerticalAlignment="Top" Height="32" Width="143" Click="Button_Click_11"/>
+                    <Button Content="Убрать с начала" HorizontalAlignment="Left" Margin="235,261,0,0" VerticalAlignment="Top" Height="32" Width="143" Click="Button_Click_11_1"/>
+                    <Button Content="Убрать с конца" HorizontalAlignment="Left" Margin="235,298,0,0" VerticalAlignment="Top" Height="32" Width="143" Click="Button_Click_11_2"/>
+
+                    <TextBlock Background="White" HorizontalAlignment="Left" Height="143" Margin="439,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="240"><Run Text=" Trim "/><Run Text="- "/><Run Text="удаляет начальные и "/><LineBreak/><Run Text=" "/><Run Text="конечные пробельные символы в"/><LineBreak/><Run Text=" строке и возвращает новую строку"/><LineBreak/><Run Text=" без этих символов. Пробельные"/><LineBreak/><Run Text=" символы включают пробелы,"/><LineBreak/><Run Text=" символы новой строки и другие"/><LineBreak/><Run Text=" символы."/><LineBreak/><Run Text=" "/><LineBreak/><Run Text=" string a = str1.Trim('-')"/><LineBreak/><Run Text=" "/><LineBreak/><Run Text=" "/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
+                    <TextBlock Name="TxtBl_otvet11" HorizontalAlignment="Left" Height="84" Margin="439,240,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="206" Background="White"/>
+                </Grid>
+            </TabItem>
+
+        </TabControl>
+        <Button Content="Выход" HorizontalAlignment="Left" Height="33" Margin="710,348,0,0" VerticalAlignment="Top" Width="68" Click="Button_Click"/>
+    </Grid>
+</Window>
